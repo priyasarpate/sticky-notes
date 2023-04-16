@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "@/styles/Navbar.module.scss";
 import TodoForm from "./Form";
 import TodoList from "./List";
 
@@ -41,15 +42,17 @@ const Index = () => {
   };
 
   return (
-    <div className="App">
-      <div className="container">
-        <h1>Todo List App</h1>
-        <TodoForm
-          handleSubmit={handleSubmit}
-          todo={todo}
-          editId={editId}
-          setTodo={setTodo}
-        />
+    <div>
+      <div>
+        <main className={styles.main}>
+          <h1>Sticky Notes</h1>
+          <TodoForm
+            handleSubmit={handleSubmit}
+            todo={todo}
+            editId={editId}
+            setTodo={setTodo}
+          />
+        </main>
 
         <TodoList
           todos={todos}
