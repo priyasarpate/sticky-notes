@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "@/styles/Navbar.module.scss";
 
 const Form = ({ handleSubmit, todo, editId, setTodo }) => {
   return (
@@ -8,8 +9,12 @@ const Form = ({ handleSubmit, todo, editId, setTodo }) => {
           type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
+          className={styles.input}
+          placeholder="add my sticky note"
         />
-        <button type="submit"> {editId ? "Edit" : "Go"}</button>{" "}
+        <button type="submit" className={styles.submit}>
+          {editId ? "Edit" : "Go"}
+        </button>
       </form>
     </>
   );

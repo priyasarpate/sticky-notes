@@ -1,14 +1,20 @@
 import React from "react";
+import styles from "@/styles/Sticky.module.scss";
 
 const TodoList = ({ todos, handleDelete, handleEdit }) => {
   return (
-    <ul>
+    <ul className={styles.list_body}>
       {todos.map((t) => (
-        <li key={t.id}>
-          <span>{t.todo}</span>
-          <button onClick={() => handleEdit(t.id)}>Edit</button>
-          <button onClick={() => handleDelete(t.id)}>Delete</button>
-        </li>
+        <div className={styles.paper} key={t.id}>
+          <div className={styles.pin}>
+            <div className={styles.shadow}></div>
+            <div className={styles.metal}></div>
+            <div className={styles.bottom_circle}></div>
+          </div>
+          <p>{t.todo}</p>
+          {/* <button onClick={() => handleEdit(t.id)}>Edit</button>
+          <button onClick={() => handleDelete(t.id)}>Delete</button> */}
+        </div>
       ))}
     </ul>
   );
