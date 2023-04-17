@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 
 .paper {
@@ -94,4 +95,9 @@
   height: 25px;
   border-radius: 50%;
   background: radial-gradient(circle at right, var(--pin-light), 30%, var(--pin-color), var(--pin-dark) 80%);
+}
+
+.icons {
+  font-size: 30px;
+  color: purple;
 }
