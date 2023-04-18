@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styles from "@/styles/Navbar.module.scss";
 import TodoForm from "./Form";
 import TodoList from "./List";
-import logo from "../../public/logo.png"
+import logo from "../../public/logo.png";
 import Image from "next/image";
+import FirstNote from "./FirstNote";
 
 const Index = () => {
   const [todo, setTodo] = useState("");
@@ -44,14 +45,14 @@ const Index = () => {
   };
 
   return (
-    <div >
-      <div >
+    <div>
+      <div>
         <div className={styles.navbar}>
           <div className={styles.logo}>
-          <Image src={logo} alt="" width={30} height={30}/>
-          <h1>Sticky Notes</h1>
+            <Image src={logo} alt="" width={30} height={30} />
+            <h1>Sticky Notes</h1>
           </div>
-       
+
           <TodoForm
             handleSubmit={handleSubmit}
             todo={todo}
@@ -59,7 +60,6 @@ const Index = () => {
             setTodo={setTodo}
           />
         </div>
-
         <TodoList
           todos={todos}
           handleEdit={handleEdit}
